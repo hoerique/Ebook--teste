@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Explorando a Geologia - Download</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#FF7F00',secondary:'#1E4D6B'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Inter', sans-serif;
+background-color: #f8f9fa;
+}
+.book-shadow {
+box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+.download-btn:hover {
+transform: translateY(-2px);
+box-shadow: 0 4px 12px rgba(255, 127, 0, 0.3);
+}
+.download-btn {
+transition: all 0.3s ease;
+}
+</style>
+</head>
+<body class="bg-white text-gray-800">
+<!-- Nav Bar -->
+<nav class="fixed top-0 w-full bg-white shadow-md z-50 px-4 py-3">
+<div class="font-['Pacifico'] text-primary text-xl">logo</div>
+</nav>
+<!-- Main Content -->
+<main class="pt-16 pb-20 px-4">
+<!-- Hero Section -->
+<section class="mt-6 mb-10">
+<div class="flex flex-col items-center">
+<h1 class="text-2xl font-bold text-center mb-2">Biblioteca Digital de Geologia</h1>
+<p class="text-gray-600 text-center mb-6">Acesse conhecimentos sobre a Terra e seus fenômenos</p>
+</div>
+</section>
+<!-- Book Display -->
+<section class="bg-white rounded-lg shadow-lg p-6 mb-8">
+<div class="flex flex-col items-center">
+<!-- Book Cover -->
+<div class="w-48 h-64 mb-6 book-shadow rounded overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=Book%20cover%20of%20Explorando%20a%20Geologia%20with%20volcano%20eruption%2C%20dramatic%20lighting%2C%20professional%20book%20cover%20design%2C%20orange%20text%20on%20dark%20background&width=300&height=400&seq=12345&orientation=portrait" alt="Capa do livro Explorando a Geologia" class="w-full h-full object-cover">
+</div>
+<!-- Book Info -->
+<h2 class="text-xl font-bold text-center mb-2">Explorando a Geologia</h2>
+<h3 class="text-gray-600 mb-4">por Daniel Sousa</h3>
+<!-- Download Section -->
+<div class="w-full bg-gray-50 rounded-lg p-4 mb-6">
+<div class="flex justify-between items-center mb-3">
+<span class="text-gray-700">Formato:</span>
+<span class="font-medium">PDF</span>
+</div>
+<div class="flex justify-between items-center mb-3">
+<span class="text-gray-700">Tamanho:</span>
+<span class="font-medium">12.4 MB</span>
+</div>
+<div class="flex justify-between items-center mb-4">
+<span class="text-gray-700">Downloads:</span>
+<span class="font-medium">1,247</span>
+</div>
+<button id="downloadBtn" class="download-btn w-full bg-primary text-white py-3 !rounded-button flex items-center justify-center cursor-pointer" data-file-url="https://drive.google.com/uc?export=download&id=13z-Rm8SONGKut3q3MjfZ9f5o8z6T79bB">
+<i class="ri-download-line ri-lg mr-2"></i>
+<span class="font-medium">Baixar PDF</span>
+</button>
+</div>
+</div>
+<!-- Book Description -->
+<div class="border-t pt-6">
+<h3 class="text-lg font-semibold mb-3">Sobre o livro</h3>
+<p class="text-gray-700 mb-4">
+"Explorando a Geologia: Descubra os Segredos da Terra!" é uma obra fascinante que revela os mistérios do nosso planeta. Desde a formação de vulcões e montanhas até a origem dos terremotos e fósseis, este livro apresenta de forma acessível os principais conceitos da geologia moderna.
+</p>
+<p class="text-gray-700 mb-4">
+Ideal para estudantes, professores e entusiastas da ciência, este material oferece uma visão abrangente sobre a estrutura e os processos que moldam nosso planeta ao longo de bilhões de anos.
+</p>
+<!-- Topics -->
+<h4 class="font-medium mb-2">Tópicos principais:</h4>
+<ul class="list-disc list-inside text-gray-700 mb-6 pl-2">
+<li class="mb-1">Formação e estrutura da Terra</li>
+<li class="mb-1">Vulcanismo e atividade sísmica</li>
+<li class="mb-1">Minerais e rochas</li>
+<li class="mb-1">Tectônica de placas</li>
+<li class="mb-1">Processos de erosão e sedimentação</li>
+<li>História geológica e paleontologia</li>
+</ul>
+<!-- Copyright Info -->
+<div class="bg-gray-50 p-3 rounded text-sm text-gray-600">
+<p>© 2025 Daniel Sousa. Todos os direitos reservados. Este material é disponibilizado apenas para fins educacionais.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Download Modal -->
+<div id="downloadModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+<div class="bg-white rounded-lg w-4/5 p-6">
+<div class="text-center mb-4">
+<div class="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-full bg-primary bg-opacity-10">
+<i class="ri-download-line ri-2x text-primary"></i>
+</div>
+<h3 class="text-lg font-semibold mb-2">Download iniciado</h3>
+<p class="text-gray-600 text-sm mb-4">Seu download começará automaticamente em instantes.</p>
+<div class="w-full h-2 bg-gray-200 rounded-full overflow-hidden mb-4">
+<div id="progressBar" class="h-full bg-primary" style="width: 0%"></div>
+</div>
+</div>
+<button id="closeModalBtn" class="w-full py-2 bg-gray-200 text-gray-800 rounded-button cursor-pointer">Fechar</button>
+</div>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+const downloadBtn = document.getElementById('downloadBtn');
+const downloadModal = document.getElementById('downloadModal');
+const closeModalBtn = document.getElementById('closeModalBtn');
+const progressBar = document.getElementById('progressBar');
+downloadBtn.addEventListener('click', function() {
+    const fileUrl = this.getAttribute('data-file-url');
+    downloadModal.classList.remove('hidden');
+    
+    let progress = 0;
+    const interval = setInterval(function() {
+        progress += 5;
+        progressBar.style.width = progress + '%';
+        
+        if (progress >= 100) {
+            clearInterval(interval);
+            const link = document.createElement('a');
+            link.href = fileUrl;
+            link.download = 'Explorando_a_Geologia.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    }, 150);
+});
+closeModalBtn.addEventListener('click', function() {
+downloadModal.classList.add('hidden');
+});
+});
+</script>
+</body>
+</html>
